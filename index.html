@@ -16,37 +16,48 @@
     <script type="module" src="index.js" defer></script>
 
     <title>Frontend Mentor | Results summary component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
-  <body class="w-screen h-screen flex justify-center items-center font-hanken">
+  <body
+    class="w-screen sm:h-screen flex justify-center items-center font-hanken"
+  >
     <article
-      class="max-sm:w-full max-sm:h-full flex max-sm:flex-col rounded-3xl shadow-xl"
+      class="max-sm:w-full max-w-[46rem] max-sm:h-fit flex max-sm:flex-col justify-between sm:rounded-3xl sm:shadow-xl shadow-paleBlue text-lg"
     >
-      <section class="sm:w-1/2 sm:rounded-3xl rounded-b-3xl bg-blue-600">
-        <h2>Your Result</h2>
-        <div>
-          <h3>76</h3>
+      <section
+        class="sm:w-1/2 sm:rounded-3xl rounded-b-3xl flex flex-col justify-between items-center gap-6 text-center p-8 sm:p-12 bg-gradient-to-b from-lightSlateBlue to-lightRoyalBlue"
+      >
+        <h2 class="text-lightLavender sm:text-2xl font-bold">Your Result</h2>
+        <div
+          class="w-fit aspect-square p-8 bg-gradient-to-b from-violetBlue to-persianBlue text-lightLavender rounded-full"
+        >
+          <h3 class="text-6xl font-extrabold text-white">76</h3>
           of 100
         </div>
-        <h3>Great</h3>
-        <p>
-          You scored higher than 65% of the people who have taken these tests.
-        </p>
+        <div>
+          <h3 class="text-2xl text-white font-bold">Great</h3>
+          <p class="text-lightLavender">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
       </section>
-      <section class="sm:w-1/2">
-        <h2>Summary</h2>
-        <div id="summaryCategoriesDiv"></div>
+      <section class="sm:w-1/2 h-full p-8 sm:p-12">
+        <h2 class="text-darkGrayBlue font-bold sm:text-2xl">Summary</h2>
+        <div id="summaryCategoriesDiv" class="py-2">
+          <div
+            class="p-4 my-3 flex justify-between bg-cobaltBlue/5 rounded-xl font-bold"
+          >
+            <div class="text-cobaltBlue">
+              <img src="./assets/images/icon-memory.svg" class="inline" />
+              <span class="m-2">Category</span>
+            </div>
+            <div class="text-darkGrayBlue">
+              69
+              <span class="text-darkGrayBlue/50"> / 100</span>
+            </div>
+          </div>
+        </div>
         <button
+          class="bg-darkGrayBlue text-white w-full rounded-full p-4"
           onclick="document.querySelector('#attributionDialog').showModal()"
         >
           Continue
@@ -56,7 +67,7 @@
 
     <dialog
       id="attributionDialog"
-      class="attribution backdrop:bg-black/25"
+      class="attribution backdrop:bg-black/25 text-lg text-center [&>a]:text-attribLink"
       onclick="this.close()"
     >
       Challenge by
