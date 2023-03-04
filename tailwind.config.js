@@ -3,6 +3,9 @@ module.exports = {
   content: ['./index.html'],
   theme: {
     extend: {
+      fontFamily: {
+        hanken: ['Hanken Grotesk', 'sans'],
+      },
       colors: {
         // primary
         lightRed: 'hsl(0, 100%, 67%)',
