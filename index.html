@@ -29,8 +29,10 @@
     </style>
   </head>
   <body class="w-screen h-screen flex justify-center items-center">
-    <article>
-      <section>
+    <article
+      class="max-sm:w-full max-sm:h-full flex max-sm:flex-col rounded-3xl shadow-xl"
+    >
+      <section class="w-1/2 rounded-3xl bg-blue-600">
         <h2>Your Result</h2>
         <div>
           <h3>76</h3>
@@ -41,7 +43,7 @@
           You scored higher than 65% of the people who have taken these tests.
         </p>
       </section>
-      <section>
+      <section class="w-1/2">
         <h2>Summary</h2>
         <div id="summaryCategoriesDiv"></div>
         <button
