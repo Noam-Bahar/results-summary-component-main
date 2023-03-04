@@ -513,6 +513,18 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .bottom-0 {
   bottom: 0px;
 }
@@ -537,6 +549,10 @@ video {
 
 .mb-4 {
   margin-bottom: 1rem;
+}
+
+.block {
+  display: block;
 }
 
 .inline {
@@ -974,6 +990,11 @@ video {
   background-color: rgb(0 0 0 / 0.25);
 }
 
+.before\:w-full::before {
+  content: var(--tw-content);
+  width: 100%;
+}
+
 .hover\:bg-lightRoyalBlue:hover {
   --tw-bg-opacity: 1;
   background-color: hsl(241 81% 54% / var(--tw-bg-opacity));
@@ -1011,6 +1032,32 @@ video {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.focus\:border-none:focus {
+  border-style: none;
+}
+
+.focus\:border-transparent:focus {
+  border-color: transparent;
+}
+
+.focus\:border-red-500:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
+}
+
+.focus-visible\:border-none:focus-visible {
+  border-style: none;
+}
+
+.focus-visible\:border-transparent:focus-visible {
+  border-color: transparent;
+}
+
+.focus-visible\:border-red-500:focus-visible {
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
 @media not all and (min-width: 640px) {
