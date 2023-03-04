@@ -42,7 +42,22 @@
       </section>
       <section class="sm:w-1/2 p-8 sm:p-12 flex flex-col gap-3 justify-between">
         <h2 class="text-darkGrayBlue font-bold sm:text-2xl">Summary</h2>
-        <div id="summaryCategoriesDiv" class="flex flex-col gap-3"></div>
+        <div id="summaryCategoriesDiv" class="flex flex-col gap-3">
+          <div
+            class="p-4 flex justify-between bg-lightRed/5 bg-orangeyYellow/5 bg-greenTeal/5 bg-cobaltBlue/5 rounded-xl font-bold"
+          >
+            <div
+              class="text-lightRed text-orangeyYellow text-greenTeal text-cobaltBlue"
+            >
+              <img src="./assets/images/icon-reaction.svg" class="inline" />
+              <span class="m-2">Placeholder</span>
+            </div>
+            <div class="text-darkGrayBlue">
+              0
+              <span class="text-darkGrayBlue/50"> / 100</span>
+            </div>
+          </div>
+        </div>
         <button
           class="bg-darkGrayBlue hover:bg-gradient-to-t from-lightRoyalBlue to-lightSlateBlue text-white w-full rounded-full p-4"
           onclick="document.querySelector('#attributionDialog').showModal()"

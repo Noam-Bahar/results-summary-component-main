@@ -36,5 +36,5 @@ const generateSummary = (data) =>
 
 window.onload = () => {
   const summaryCategoriesDiv = document.querySelector('#summaryCategoriesDiv');
-  summaryCategoriesDiv.innerHTML += generateSummary(data);
+  summaryCategoriesDiv.innerHTML = generateSummary(data);
 };
