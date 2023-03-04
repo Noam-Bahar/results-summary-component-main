@@ -13,6 +13,8 @@
     />
     <link href="/output.css" rel="stylesheet" />
 
+    <script type="module" src="index.js" defer></script>
+
     <title>Frontend Mentor | Results summary component</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -26,36 +28,39 @@
       }
     </style>
   </head>
-  <body>
+  <body class="w-screen h-screen flex justify-center items-center">
+    <article>
+      <section>
+        <h2>Your Result</h2>
+        <div>
+          <h3>76</h3>
+          of 100
+        </div>
+        <h3>Great</h3>
+        <p>
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </section>
+      <section>
+        <h2>Summary</h2>
+        <div id="summaryCategoriesDiv"></div>
+        <button
+          onclick="document.querySelector('#attributionDialog').showModal()"
+        >
+          Continue
+        </button>
+      </section>
+    </article>
 
-  Your Result
-  76
-  of 100
-
-  Great
-  You scored higher than 65% of the people who have taken these tests.
-  
-  Summary
-
-  Reaction
-  80 / 100
-
-  Memory
-  92 / 100
-
-  Verbal
-  61 / 100
-
-  Visual
-  72 / 100
-
-  Continue
-
-    <div class="attribution">
+    <dialog
+      id="attributionDialog"
+      class="attribution backdrop:bg-black/25"
+      onclick="this.close()"
+    >
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </dialog>
   </body>
 </html>
