@@ -28,34 +28,21 @@
       >
         <h2 class="text-lightLavender sm:text-2xl font-bold">Your Result</h2>
         <div
-          class="w-fit aspect-square p-8 bg-gradient-to-b from-violetBlue to-persianBlue text-lightLavender rounded-full"
+          class="w-fit aspect-square p-12 bg-gradient-to-b from-violetBlue to-persianBlue text-lightLavender rounded-full"
         >
-          <h3 class="text-6xl font-extrabold text-white">76</h3>
+          <h3 class="text-7xl font-extrabold text-white">76</h3>
           of 100
         </div>
         <div>
-          <h3 class="text-2xl text-white font-bold">Great</h3>
+          <h3 class="text-3xl mb-4 text-white font-bold">Great</h3>
           <p class="text-lightLavender">
             You scored higher than 65% of the people who have taken these tests.
           </p>
         </div>
       </section>
-      <section class="sm:w-1/2 h-full p-8 sm:p-12">
+      <section class="sm:w-1/2 p-8 sm:p-12 flex flex-col gap-3 justify-between">
         <h2 class="text-darkGrayBlue font-bold sm:text-2xl">Summary</h2>
-        <div id="summaryCategoriesDiv" class="py-2">
-          <div
-            class="p-4 my-3 flex justify-between bg-cobaltBlue/5 rounded-xl font-bold"
-          >
-            <div class="text-cobaltBlue">
-              <img src="./assets/images/icon-memory.svg" class="inline" />
-              <span class="m-2">Category</span>
-            </div>
-            <div class="text-darkGrayBlue">
-              69
-              <span class="text-darkGrayBlue/50"> / 100</span>
-            </div>
-          </div>
-        </div>
+        <div id="summaryCategoriesDiv" class="flex flex-col gap-3"></div>
         <button
           class="bg-darkGrayBlue hover:bg-gradient-to-t from-lightRoyalBlue to-lightSlateBlue text-white w-full rounded-full p-4"
           onclick="document.querySelector('#attributionDialog').showModal()"

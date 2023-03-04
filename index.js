@@ -12,9 +12,10 @@ const colors = {
 const getColor = (color, opacity) => `${color}${opacity ? `/${opacity}` : ''}`;
 const bgColor = (color, opacity) => `bg-${getColor(color, opacity)}`;
 const textColor = (color, opacity) => `text-${getColor(color, opacity)}`;
+
 const categoryElement = ({ category, score, icon }) => `
 <div
-  class="p-4 my-3 flex justify-between ${bgColor(
+  class="p-4 flex justify-between ${bgColor(
     colors[category],
     5
   )} rounded-xl font-bold"
@@ -35,5 +36,5 @@ const generateSummary = (data) =>
 
 window.onload = () => {
   const summaryCategoriesDiv = document.querySelector('#summaryCategoriesDiv');
-  summaryCategoriesDiv.innerHTML = generateSummary(data);
+  summaryCategoriesDiv.innerHTML += generateSummary(data);
 };
