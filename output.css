@@ -592,6 +592,10 @@ video {
   max-width: 46rem;
 }
 
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .flex-col {
   flex-direction: column;
 }
@@ -642,6 +646,10 @@ video {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
 }
 
 .rounded-b-3xl {
@@ -704,6 +712,10 @@ video {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
 
+.bg-gradient-to-t {
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
 .from-lightSlateBlue {
   --tw-gradient-from: hsl(252, 100%, 67%);
   --tw-gradient-to: hsl(252 100% 67% / 0);
@@ -716,12 +728,22 @@ video {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
 }
 
+.from-lightRoyalBlue {
+  --tw-gradient-from: hsl(241, 81%, 54%);
+  --tw-gradient-to: hsl(241 81% 54% / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
 .to-lightRoyalBlue {
   --tw-gradient-to: hsl(241, 81%, 54%);
 }
 
 .to-persianBlue {
   --tw-gradient-to: hsla(241, 72%, 46%, 0);
+}
+
+.to-lightSlateBlue {
+  --tw-gradient-to: hsl(252, 100%, 67%);
 }
 
 .p-4 {
@@ -748,6 +770,11 @@ video {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .text-center {
@@ -869,6 +896,40 @@ video {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-colors {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-100 {
+  transition-duration: 100ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
 @font-face {
   font-family: 'Hanken Grotesk';
 
@@ -877,6 +938,45 @@ video {
 
 .backdrop\:bg-black\/25::backdrop {
   background-color: rgb(0 0 0 / 0.25);
+}
+
+.hover\:bg-lightRoyalBlue:hover {
+  --tw-bg-opacity: 1;
+  background-color: hsl(241 81% 54% / var(--tw-bg-opacity));
+}
+
+.hover\:bg-gradient-to-b:hover {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.hover\:bg-gradient-to-t:hover {
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.hover\:from-violetBlue:hover {
+  --tw-gradient-from: hsla(256, 72%, 46%, 1);
+  --tw-gradient-to: hsla(256, 72%, 46%, 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.hover\:from-lightRoyalBlue:hover {
+  --tw-gradient-from: hsl(241, 81%, 54%);
+  --tw-gradient-to: hsl(241 81% 54% / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.hover\:to-persianBlue:hover {
+  --tw-gradient-to: hsla(241, 72%, 46%, 0);
+}
+
+.hover\:to-lightSlateBlue:hover {
+  --tw-gradient-to: hsl(252, 100%, 67%);
+}
+
+.hover\:transition-colors:hover {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }
 
 @media not all and (min-width: 640px) {
